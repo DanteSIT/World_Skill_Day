@@ -1,0 +1,34 @@
+{
+  "rules": {
+    "users": {
+      ".read": "auth != null",
+      "$uid": {
+        ".write": "auth != null && auth.uid === $uid",
+        "firstname": { ".read": true },
+        "surname": { ".read": true },
+        "createdAt": { ".read": true },
+        "email": { ".read": "auth != null && auth.uid === $uid" },
+        "mobile": { ".read": "auth != null && auth.uid === $uid" },
+        "nin_passport": { ".read": "auth != null && auth.uid === $uid" },
+        "address": { ".read": "auth != null && auth.uid === $uid" }
+      }
+    },
+    "messages": {
+      "$messageId": {
+        ".read": "auth != null",
+        ".write": "auth != null",
+        "public": {
+          ".read": true
+        }
+      }
+    },
+    "global_messages": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "community": {
+      ".read": true,
+      ".write": "auth != null"
+    }
+  }
+}
