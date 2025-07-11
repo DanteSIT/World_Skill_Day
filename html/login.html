@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login Form Design</title>
+      <link rel="stylesheet" href="../css/style1.css">
+   </head>
+   <body>
+      <table class="login-table">
+        <tr><td colspan="2" class="login-title">Login Form</td></tr>
+        <form id="login-form">
+        <tr><td>Email Address:</td><td><input type="text" id="email" required></td></tr>
+        <tr><td>Password:</td><td><input type="password" id="password" required></td></tr>
+        <tr>
+          <td colspan="2">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember me</label>
+            <span class="login-link"><a href="forgotpadd.html">Forgot password?</a></span>
+          </td>
+        </tr>
+        <tr><td colspan="2" style="text-align:center; padding-top:16px;"><input type="submit" value="Login" id="login-btn" class="login-btn"></td></tr>
+        <tr><td colspan="2" class="login-signup">Not a member? <a href="sign_in.html">Signup now</a></td></tr>
+        <tr><td colspan="2"><div id="auth-message"></div></td></tr>
+        </form>
+      </table>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="/js/login.js" type="module"></script>
+   </body>
+</html>

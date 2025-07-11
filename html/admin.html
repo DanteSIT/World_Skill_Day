@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js" type="module"></script>
+</head>
+<body>
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+
+            <h2 class="sidebar-title">BTG</h2>
+        
+            <nav>
+                <a href="dashbaord.html">Profile</a>
+                <a href="community.html">Community</a>
+                <a href="messages.html">Messages</a>
+                <a href="learning_hub.html">Learning Hub</a>
+                <a href="admin.html" class="active">Admin Portal</a>
+                <a href="ai_mentor.html">AI Mentor</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="admin-container">
+                <h1>Admin Portal</h1>
+                
+                <!-- Admin Verification -->
+                <div id="admin-verify" class="admin-section">
+                    <h2>Admin Verification</h2>
+                    <div class="admin-form">
+                        <input type="password" id="admin-code" placeholder="Enter Admin Code" class="admin-input">
+                        <button id="verify-btn" class="admin-btn">Verify</button>
+                    </div>
+                </div>
+
+                <!-- Admin Controls (hidden by default) -->
+                <div id="admin-controls" class="admin-sections hidden">
+                    <div class="admin-section">
+                        <h2>User Management</h2>
+                        <div id="users-list" class="admin-list"></div>
+                    </div>
+                    
+                    <div class="admin-section">
+                        <h2>Message Management</h2>
+                        <div id="messages-list" class="admin-list"></div>
+                    </div>
+                    
+                    <div class="admin-section">
+                        <h2>Community Posts</h2>
+                        <div id="posts-list" class="admin-list"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="admin-message" class="admin-message"></div>
+    <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

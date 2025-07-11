@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Password reset</title>
+      <link rel="stylesheet" href="style1.css">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title">
+            Password Reset
+         </div>
+         <form id="reset-form">
+            <div class="field">
+               <input id="reset-email" type="email" required>
+               <label>Email</label>
+            </div>
+            <div class="field">
+               <input type="submit" value="Send Reset Email">
+            </div>
+            <div id="reset-message" style="color:#c850c0;margin-top:10px;"></div>
+         </form>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js"></script>
+      <script src="script.js" type="module"></script>
+   </body>
+</html>

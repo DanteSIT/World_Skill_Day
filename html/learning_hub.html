@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Hub</title>
+  <link rel="stylesheet" href="../css/style1.css">
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <style>
+    .sidebar nav a:hover {
+      color: #ffffff;
+    }
+
+    .sidebar nav a.active {
+      color: #ecf0f1;
+      font-weight: bold;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .hub-section {
+      background: white;
+      border: 2px solid #dedede;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .hub-section h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .hub-section p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+    }
+  </style>
+  <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js"></script>
+  <script src="script.js" type="module"></script>
+</head>
+<body>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+     <h2 class="sidebar-title">BTG</h2>
+      <nav>
+        <a href="dashbaord.html">Profile</a>
+        <a href="community.html">Community</a>
+        <a href="messages.html">Messages</a>
+        <a href="learning_hub.html" class="active">Learning Hub</a>
+        <a href="admin.html">Admin Portal</a>
+        <a href="ai_mentor.html">AI Mentor</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="hub-section">
+        <h2>📚 Learning Materials</h2>
+        <div id="materials-list"><p><em>Loading...</em></p></div>
+      </div>
+
+      <div class="hub-section" id="upload-section" style="display:none;">
+        <h2>⬆️ Upload Zone (Admins Only)</h2>
+        <form id="upload-form">
+          <div class="form-group">
+            <label for="material-header">Header</label>
+            <input type="text" id="material-header" required minlength="3" maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="material-description">Description</label>
+            <textarea id="material-description" required minlength="10" maxlength="500"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="material-link">Google Drive Link</label>
+            <input type="url" id="material-link" placeholder="https://drive.google.com/..." pattern="https://drive.google.com/.*">
+          </div>
+          <button type="submit" class="btn btn-primary">Upload Material</button>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="../js/learning_hub.js"></script>
+</body>
+</html>
