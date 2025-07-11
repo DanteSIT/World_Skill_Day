@@ -1,0 +1,18 @@
+[debug] [2025-07-11T14:01:38.354Z] ----------------------------------------------------------------------
+[debug] [2025-07-11T14:01:38.355Z] Command:       /usr/local/bin/firebase /home/dante/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase hosting:disable --site worldscienceday
+[debug] [2025-07-11T14:01:38.356Z] CLI Version:   14.10.1
+[debug] [2025-07-11T14:01:38.356Z] Platform:      linux
+[debug] [2025-07-11T14:01:38.356Z] Node Version:  v20.18.2
+[debug] [2025-07-11T14:01:38.356Z] Time:          Fri Jul 11 2025 18:01:38 GMT+0400 (Seychelles Time)
+[debug] [2025-07-11T14:01:38.356Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-11T14:01:38.538Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-11T14:01:38.538Z] > authorizing via signed-in user (dantelespoirsit@gmail.com)
+[debug] [2025-07-11T14:01:38.538Z] [iam] checking project hackathon2025-40af0 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-07-11T14:01:38.539Z] Checked if tokens are valid: true, expires at: 1752244026070
+[debug] [2025-07-11T14:01:38.539Z] Checked if tokens are valid: true, expires at: 1752244026070
+[debug] [2025-07-11T14:01:38.540Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hackathon2025-40af0:testIamPermissions [none]
+[debug] [2025-07-11T14:01:38.540Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hackathon2025-40af0:testIamPermissions x-goog-quota-user=projects/hackathon2025-40af0
+[debug] [2025-07-11T14:01:38.540Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hackathon2025-40af0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-07-11T14:01:40.212Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hackathon2025-40af0:testIamPermissions 200
+[debug] [2025-07-11T14:01:40.212Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hackathon2025-40af0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
